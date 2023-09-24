@@ -24,6 +24,33 @@ a {
     text-decoration: none;
 }
 
+.btn {
+    --height: 62px;
+    height: var(--height);
+    min-width: 170px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    color: #fdfdfd;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.67;
+    background-color: var(--primary-color);
+    transition: opacity 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.section-desc {
+    color: var(--gray-color);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.67;
+}
+
 button,
 input,
 select,
@@ -95,4 +122,196 @@ textarea {
     font-size: 1.8rem;
     font-weight: 400;
     transition: color 0.2s, text-shadow 0.2s;
+}
+
+/* Hero */
+.hero {
+    margin-top: 44px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero__decor {
+    position: absolute;
+    z-index: -1;
+}
+
+.hero__decor:first-of-type {
+    top: -12%;
+    left: -1%;
+}
+
+.hero__decor:last-of-type {
+    scale: 0.4;
+    bottom: -50%;
+    right: -20%;
+}
+
+.hero__media-img {
+    max-width: 514px;
+    object-fit: cover;
+}
+
+.hero__content {
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: -30px;
+}
+
+.hero__heading {
+    color: var(--black-color);
+    font-size: 8rem;
+    font-weight: 500;
+    line-height: 0.95;
+}
+
+.hero__desc {
+    margin-top: 20px;
+    width: 370px;
+}
+
+.hero__cta {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    margin-top: 50px;
+}
+
+.hero__cta-link {
+    color: var(--black-color);
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.67;
+    text-decoration: underline;
+}
+
+.hero__social {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    margin-top: 104px;
+}
+
+.hero__social-title {
+    color: var(--gray-color);
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.875;
+}
+
+.hero__social-list {
+    display: flex;
+    column-gap: 20px;
+}
+
+.hero__social-item:nth-child(2),
+.hero__social-item:nth-child(3) {
+    margin-top: 1px;
+}
+
+.hero__social-link {
+    width: 40px;
+    height: 40px;
+    color: var(--black-color);
+    border-radius: 50%;
+    border: 1px solid rgb(9, 59, 238, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s, background 0.2s, border 0.2s;
+}
+
+.hero__social-link:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Client */
+.client {
+    padding: 98px 0 70px;
+}
+
+.client__inner {
+    display: flex;
+    align-items: center;
+    column-gap: 105px;
+}
+
+.client__heading {
+    max-width: 253px;
+    color: var(--black-color);
+    font-size: 4.2rem;
+    font-weight: 500;
+    line-height: 1.19;
+    padding-left: 99px;
+    position: relative;
+    flex-shrink: 0;
+    box-sizing: content-box;
+}
+
+.client__heading::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 0;
+    height: 2px;
+    width: 86px;
+    background-color: var(--primary-color);
+}
+
+.client__list {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 34px;
+}
+
+.client-item:nth-child(2) .client-item__logo-wrap {
+    background-color: #fbfaff;
+}
+
+.client-item:nth-child(3) .client-item__logo-wrap {
+    background-color: #fee101;
+}
+
+.client-item:nth-child(4) .client-item__logo-wrap {
+    background-color: #f00;
+}
+
+.client-item:nth-child(5) .client-item__logo-wrap {
+    background-color: #14a800;
+}
+
+.client-item:nth-child(7) .client-item__logo-wrap {
+    background-color: #7f54b3;
+}
+
+.client-item__link {
+    display: flex;
+    align-items: center;
+}
+
+.client-item__link:hover .client-item__name {
+    text-decoration: underline;
+}
+
+.client-item__logo-wrap {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.client-item__name {
+    color: var(--black-color);
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    letter-spacing: -0.11rem;
+    white-space: nowrap;
 }
