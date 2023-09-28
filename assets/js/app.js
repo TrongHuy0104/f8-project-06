@@ -8,9 +8,13 @@ const videoOverlay = $(".stat__media-overlay");
 const feedbackList = $(".feedback__list");
 const feedbackItem = $$(".feedback-item");
 const dots = $$(".dot");
+const faqItems = $$(".faq-item");
+const faqIcons = $$(".faq-item__icon-wrap");
+const FAQAnswers = $$(".faq-item__desc");
 
 let isPlayVideo = false;
 let feedbackIndex = 0;
+let isShowAnswer = false;
 
 // Play Video
 playBtn.onclick = () => {
@@ -26,6 +30,12 @@ dots.forEach((dot, index) => {
         feedbackIndex = index;
         clearInterval(interval);
         interval = setInterval(autoSlideShow, 3000);
+    };
+});
+
+faqIcons.forEach((faqIcon, index) => {
+    faqIcon.onclick = () => {
+        showFAQAnswer(index);
     };
 });
 
@@ -54,4 +64,32 @@ function updateFeedbackByIndex(index) {
     });
     feedbackItem[index].classList.add("feedback-item--active");
     dots[index].classList.add("dot--active");
+}
+
+function showFAQAnswer(index) {
+    const faqIconOpen = faqIcons[index].querySelector(".faq-item__icon--open");
+    const faqIconClose = faqIcons[index].querySelector(
+        ".faq-item__icon--close"
+    );
+    const faqTitle = faqItems[index].querySelector(".faq-item__title");
+    // const faqSeparate = faqItems[index].querySelector(".faq-item__separate");
+    if (!isShowAnswer) {
+        FAQAnswers[index].style.display = "block";
+        faqIconOpen.style.display = "none";
+        faqIconClose.style.display = "block";
+        faqIcons[index].style.alignSelf = "center";
+        faqIcons[index].style.color = "var(--primary-color)";
+        faqIcons[index].style.borderColor = "rgb(93 59 238 / 20%)";
+        faqTitle.style.color = "var(--primary-color)";
+        isShowAnswer = true;
+    } else {
+        FAQAnswers[index].style.display = "none";
+        faqIconOpen.style.display = "block";
+        faqIconClose.style.display = "none";
+        faqIcons[index].style.color = "var(--black-color)";
+        faqItems[index].style.alignItem = "center";
+        faqIcons[index].style.borderColor = "rgb(22, 26, 28, 0.2)";
+        faqTitle.style.color = "var(--black-color)";
+        isShowAnswer = false;
+    }
 }

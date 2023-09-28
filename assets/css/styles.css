@@ -733,3 +733,120 @@ textarea {
     margin-top: 4px;
     margin-bottom: 40px;
 }
+
+/* FAQ */
+.faq {
+    padding: 95px 0 80px;
+}
+
+.faq__heading {
+    max-width: 575px;
+    margin-bottom: 80px;
+}
+
+.faq__list {
+    width: min(1009px, 100%);
+}
+
+/* FAQ Item */
+.faq-item {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    position: relative;
+    padding: 0 0 12px 22px;
+    border-bottom: 2px solid var(--black-color);
+}
+
+.faq-item + .faq-item {
+    margin-top: 60px;
+}
+
+.faq-item__title {
+    color: var(--black-color);
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1.25;
+    margin-bottom: 22px;
+}
+
+.faq-item__desc {
+    color: var(--gray-color);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.67;
+    max-width: 487px;
+    display: none;
+}
+
+.faq-item__icon-wrap {
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(22, 26, 28, 0.2);
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.faq-item__icon-wrap:hover {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+}
+
+.faq-item__icon-wrap:hover .faq-item__icon--open,
+.faq-item__icon-wrap:hover .faq-item__icon--close {
+    color: #fff;
+}
+
+.faq-item__icon--close,
+.faq-item__icon--open {
+    position: relative;
+    transition: color 0.2s;
+}
+
+.faq-item__icon--close {
+    display: none;
+    top: -3px;
+}
+
+.faq-item__icon--open {
+    top: 1px;
+}
+
+.faq-item__separate {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #08182f;
+}
+/* 
+.faq__input:checked ~ .faq__item-info .faq-item__title {
+    color: var(--primary-color);
+}
+
+.faq__input:checked ~ .faq__item-info .faq-item__desc {
+    display: block;
+}
+
+.faq__input:checked ~ .faq__item-seperate {
+    background-color: rgb(93 59 238 / 20%);
+}
+
+.faq__input:checked ~ .faq__item-icon-wrap {
+    border-color: var(--primary-color);
+}
+
+.faq__input:checked ~ .faq__item-icon-wrap .faq__item-icon--close {
+    display: block;
+    color: var(--primary-color);
+}
+
+.faq__input:checked ~ .faq__item-icon-wrap .faq__item-icon--open {
+    display: none;
+} */
