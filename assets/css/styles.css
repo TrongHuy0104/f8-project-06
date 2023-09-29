@@ -825,28 +825,53 @@ textarea {
     height: 2px;
     background-color: #08182f;
 }
-/* 
-.faq__input:checked ~ .faq__item-info .faq-item__title {
+
+/* Atmosphere */
+.atmosphere {
+    padding: 80px 0 70px;
+}
+
+.atmosphere__top {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.atmosphere__desc {
+    margin: 20px auto 0;
+    max-width: 528px;
+}
+
+.atmosphere__link {
+    display: inline-block;
+    margin-top: 40px;
     color: var(--primary-color);
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1.25;
 }
 
-.faq__input:checked ~ .faq__item-info .faq-item__desc {
+.atmosphere__link::after {
+    content: "";
     display: block;
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    bottom: 0;
+    left: 0;
 }
 
-.faq__input:checked ~ .faq__item-seperate {
-    background-color: rgb(93 59 238 / 20%);
+.atmosphere-item {
+    width: 100%;
+    height: 529px;
+    transition: scale ease-in-out 0.3s;
 }
 
-.faq__input:checked ~ .faq__item-icon-wrap {
-    border-color: var(--primary-color);
+.atmosphere-item:hover {
+    scale: 1.05;
 }
 
-.faq__input:checked ~ .faq__item-icon-wrap .faq__item-icon--close {
-    display: block;
-    color: var(--primary-color);
+.atmosphere-item__thumb {
+    width: 100%;
+    object-fit: cover;
 }
-
-.faq__input:checked ~ .faq__item-icon-wrap .faq__item-icon--open {
-    display: none;
-} */
