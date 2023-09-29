@@ -875,3 +875,70 @@ textarea {
     width: 100%;
     object-fit: cover;
 }
+
+/* Contact */
+.contact {
+    margin: 80px 0 50px;
+}
+
+.contact .container {
+    width: 1330px;
+    max-width: 100%;
+}
+
+.contact__inner {
+    position: relative;
+}
+
+.contact__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 68px 0;
+    background: #fbfaff;
+}
+
+.contact__img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.contact__info {
+    max-width: 574px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact__info,
+.contact__cta {
+    position: relative;
+    z-index: 1;
+}
+
+.contact__desc {
+    margin-top: 20px;
+}
+
+.contact__decor {
+    position: absolute;
+}
+
+.contact__decor:nth-of-type(1) {
+    bottom: 0;
+    left: 0;
+}
+
+.contact__decor:nth-of-type(2) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contact__decor:nth-of-type(3) {
+    top: 0;
+    right: 0;
+}
