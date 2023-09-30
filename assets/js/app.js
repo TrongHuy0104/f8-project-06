@@ -11,10 +11,18 @@ const dots = $$(".dot");
 const faqItems = $$(".faq-item");
 const faqIcons = $$(".faq-item__icon-wrap");
 const FAQAnswers = $$(".faq-item__desc");
+const menuIcon = $(".menu__icon-wrap");
+const mobileHeader = $(".mobile-header");
+const overlay = $(".overlay");
+const pcNav = $(".navbar__list");
+const mobileNav = $(".mobile-header__list");
 
 let isPlayVideo = false;
 let feedbackIndex = 0;
 let isShowAnswer = false;
+let isShowMobileHeader = false;
+
+mobileNav.innerHTML = pcNav.innerHTML;
 
 // Play Video
 playBtn.onclick = () => {
@@ -38,6 +46,10 @@ faqIcons.forEach((faqIcon, index) => {
         showFAQAnswer(index);
     };
 });
+
+menuIcon.onclick = showMobileHeader;
+
+overlay.onclick = hideMobileHeader;
 
 // Handle Auto Slideshow
 function autoSlideShow() {
@@ -72,7 +84,6 @@ function showFAQAnswer(index) {
         ".faq-item__icon--close"
     );
     const faqTitle = faqItems[index].querySelector(".faq-item__title");
-    // const faqSeparate = faqItems[index].querySelector(".faq-item__separate");
     if (!isShowAnswer) {
         FAQAnswers[index].style.display = "block";
         faqIconOpen.style.display = "none";
@@ -92,4 +103,16 @@ function showFAQAnswer(index) {
         faqTitle.style.color = "var(--black-color)";
         isShowAnswer = false;
     }
+}
+
+function showMobileHeader() {
+    mobileHeader.style.transform = "translateX(0%)";
+    overlay.style.opacity = 1;
+    overlay.style.visibility = "visible";
+}
+
+function hideMobileHeader() {
+    mobileHeader.style.transform = "translateX(100%)";
+    overlay.style.opacity = 0;
+    overlay.style.visibility = "hidden";
 }

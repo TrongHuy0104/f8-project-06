@@ -114,7 +114,7 @@
                                 class="navbar__contact-icon"
                             />
                         </div>
-                        hi@arif.interactive
+                        <span class="hide-on-mobile">hi@arif.interactive</span>
                     </a>
                     <!-- Logo -->
                     <a href="/">
@@ -125,7 +125,7 @@
                         />
                     </a>
                     <!-- Navbar List -->
-                    <ul class="navbar__list">
+                    <ul class="navbar__list hide-on-mobile">
                         <li class="navbar__item">
                             <a href="#!" class="navbar__link">Projects</a>
                         </li>
@@ -139,16 +139,41 @@
                             <a href="#!" class="navbar__link">Contact</a>
                         </li>
                     </ul>
+
+                    <!-- Mobile Menu Icon -->
+                    <div class="menu__icon-wrap show-on-mobile">
+                        <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 7H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1 1H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                    </div>
+
                 </nav>
             </div>
         </header>
+        
+        <!-- Mobile Header -->
+        <header class="mobile-header show-on-mobile">
+            <!-- Logo -->
+            <a href="/">
+                <img
+                    src="./assets/imgs/logo.png"
+                    alt=""
+                    class="navbar__logo"
+                />
+            </a>
+            <ul class="mobile-header__list"></ul>
+        </header>
+
+        <!-- Overlay -->
+        <div class="overlay"></div>
 
         <!-- Main -->
         <main>
             <!-- Hero -->
             <section class="hero">
                 <div class="container">
-                    <div class="row">
+                    <div class="row hero__inner">
                         <div class="col-lg-6 col-md-12 col-sm-12">
                             <figure class="hero__media">
                                 <img
@@ -253,8 +278,8 @@
                             </section>
                         </div>
                     </div>
-                    <img src="./assets/imgs/decor.svg" class="hero__decor"></img>
-                    <img src="./assets/imgs/decor.svg" class="hero__decor"></img>
+                    <img src="./assets/imgs/hero_01.svg" class="hero__decor"></img>
+                    <img src="./assets/imgs/hero_02.svg" class="hero__decor"></img>
                 </div>
             </section>
 
@@ -334,7 +359,7 @@
                         <p class="section-desc feature__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
                     </div>
                     <div class="feature__list">
-                        <div class="row row-cols-lg-3">
+                        <div class="row row-cols-lg-3 row-cols-1">
                             <div class="col">
                                 <!-- Feature Item 1 -->
                                 <article class="feature-item">
@@ -380,15 +405,15 @@
             <section class="project">
                 <div class="container">
                     <div class="row project__top">
-                        <div class="col-lg-5">
+                        <div class="col-lg-5 col-12">
                             <h2 class="section-heading project__heading">Take a look at <br> 
                                 my recent projects</h2>
                         </div>
-                        <div class="col-lg-6 offset-lg-1">
+                        <div class="col-lg-6 col-12 offset-lg-1">
                             <p class="section-desc project__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
                         </div>
                     </div>
-                    <div class="row row-cols-2">
+                    <div class="row row-cols-lg-2 row-cols-1">
                         <div class="col">
                             <!-- Project Item 1 -->
                             <article class="project-item">
@@ -477,7 +502,7 @@
                             <div class="btn stat__media-tag">
                                 Intro Video
                             </div>
-                            <video src="./assets/videos/video.mp4" class="stat__media-video" controls poster="./assets/imgs/video-thumbnail.png"></video>
+                            <video src="./assets/videos/tom&jerry.mp4" class="stat__media-video" controls></video>
                         </div>
                     </div>
                 </div>
@@ -676,7 +701,7 @@
                         <p class="atmosphere__desc section-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
                         <a href="#!" class="atmosphere__link">@interaction_arif</a>
                     </div>
-                    <div class="row row-cols-3">
+                    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1">
                         <!-- Atmosphere Item 1 -->
                         <div class="col">
                             <div class="atmosphere-item">
